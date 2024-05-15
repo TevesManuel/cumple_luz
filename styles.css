@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    position: relative;
+    overflow: hidden;
+}
+
+header, footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    position: relative;
+    z-index: 10;
+}
+
+h1 {
+    font-family: 'Arial', sans-serif;
+    color: #e74c3c;
+}
+
+.hearts-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none; /* Asegura que los corazones no interfieran con otros elementos */
+}
+
+.heart {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #e74c3c;
+    transform: rotate(45deg);
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #e74c3c;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -5px;
+    left: 0;
+}
+
+.heart::after {
+    left: 5px;
+    top: 0;
+}
+
+/* Generar múltiples corazones con diferentes posiciones y rotaciones */
+@keyframes random-positions {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.heart:nth-child(1) { top: 10%; left: 20%; transform: rotate(15deg); }
+.heart:nth-child(2) { top: 30%; left: 40%; transform: rotate(-20deg); }
+.heart:nth-child(3) { top: 50%; left: 60%; transform: rotate(25deg); }
+.heart:nth-child(4) { top: 70%; left: 80%; transform: rotate(-30deg); }
+.heart:nth-child(5) { top: 20%; left: 50%; transform: rotate(10deg); }
+.heart:nth-child(6) { top: 40%; left: 70%; transform: rotate(-15deg); }
+.heart:nth-child(7) { top: 60%; left: 90%; transform: rotate(20deg); }
+.heart:nth-child(8) { top: 80%; left: 30%; transform: rotate(-25deg); }
+.heart:nth-child(9) { top: 25%; left: 75%; transform: rotate(5deg); }
+.heart:nth-child(10) { top: 45%; left: 85%; transform: rotate(-5deg); }
