@@ -4,6 +4,18 @@ body {
     background-color: #f8f9fa;
     position: relative;
     overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-image: url('./background.jpg');
+    background-position: center;
+    background-repeat: repeat;
 }
 
 header, footer {
@@ -13,10 +25,32 @@ header, footer {
     position: relative;
     z-index: 10;
 }
+img
+{
+    max-width: 100%;
+    max-height: 40vh;
+    border-radius: 10px;
+    border: 1px solid rgb(66, 66, 66);
+}
 
 h1 {
     font-family: 'Arial', sans-serif;
     color: #e74c3c;
+}
+
+#main-message-title
+{
+    color: white;
+    text-align: center;
+    text-shadow: black 4px 1px;
+}
+
+#main-message-next-button
+{
+    background-color: #e74c3c;
+    border: 0;
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
 
 .hearts-container {
@@ -27,7 +61,17 @@ h1 {
     height: 100vh;
     z-index: 0;
     overflow: hidden;
-    pointer-events: none; /* Asegura que los corazones no interfieran con otros elementos */
+    pointer-events: none;
+}
+
+#main-message {
+    background: rgba(83, 81, 82, 0.128);
+    backdrop-filter: blur(10px);
+    width: 75vw;
+    padding: 2vw;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .heart {
@@ -58,19 +102,45 @@ h1 {
     top: 0;
 }
 
-/* Generar múltiples corazones con diferentes posiciones y rotaciones */
-@keyframes random-positions {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+#image-galery
+{
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
 }
-
-.heart:nth-child(1) { top: 10%; left: 20%; transform: rotate(15deg); }
-.heart:nth-child(2) { top: 30%; left: 40%; transform: rotate(-20deg); }
-.heart:nth-child(3) { top: 50%; left: 60%; transform: rotate(25deg); }
-.heart:nth-child(4) { top: 70%; left: 80%; transform: rotate(-30deg); }
-.heart:nth-child(5) { top: 20%; left: 50%; transform: rotate(10deg); }
-.heart:nth-child(6) { top: 40%; left: 70%; transform: rotate(-15deg); }
-.heart:nth-child(7) { top: 60%; left: 90%; transform: rotate(20deg); }
-.heart:nth-child(8) { top: 80%; left: 30%; transform: rotate(-25deg); }
-.heart:nth-child(9) { top: 25%; left: 75%; transform: rotate(5deg); }
-.heart:nth-child(10) { top: 45%; left: 85%; transform: rotate(-5deg); }
+#image-container
+{
+    background-color: rgb(66, 66, 66);
+    padding: 5%;
+    border-radius: 10px;
+    height: 50vh;
+    overflow-y: scroll;
+}
+h3
+{
+    color: white;
+    margin-bottom: 0;
+}
+.image-holder
+{
+    background-color: rgb(30, 30, 30);
+    border-radius: 10px;
+    padding: 10%;
+    margin: 5%;
+    text-align: center;
+}
+#secret-gift
+{
+    display: none;
+    background-color: rgb(66, 66, 66);
+    width: 75vw;
+    height: 50vh;
+    place-items: center;
+    text-align: center;
+}

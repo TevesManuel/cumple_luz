@@ -1,34 +1,70 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" style="overflow: hidden;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¡Feliz Cumpleaños, [Nombre]!</title>
+    <title>¡Feliz Cumpleaños!</title>
+    <link rel="stylesheet" href="mvp.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>¡Feliz Cumpleaños, [Nombre]!</h1>
-    </header>
-
-    <!-- Contenido de la página -->
-
-    <footer>
-        <p>Con amor, [Tu Nombre]</p>
-    </footer>
-    <div class="hearts-container">
-        <!-- Aquí generamos múltiples corazones -->
-        <div class="heart"></div>
-        <div class="heart"></div>
-        <div class="heart"></div>
-        <div class="heart"></div>
-        <div class="heart"></div>
-        <div class="heart"></div>
-        <div class="heart"></div>
-        <div class="heart"></div>
-        <div class="heart"></div>
-        <div class="heart"></div>
-        <!-- Puedes agregar más corazones según sea necesario -->
+    <div class="hearts-container"></div>
+    <div id="main-message">
+        <h1 id="main-message-title">¡Feliz Cumpleaños, Amochi!</h1>
+        <div style="    display: flex;
+        justify-content: space-between;
+        align-items: center;">
+            <p style="display: inline;">Con musho amor, Manu ♥</p>
+            <button id="main-message-next-button">Y?</button>
+        </div>
     </div>
+    <div id="image-galery">
+        <div id="image-container">
+            <h1 style="color: white;"">Gracias</h1>
+            <div class="image-holder">
+                <img src="./Buena.jpeg"/>
+                <h3>Gracias por ser tan buena ♥</h3>
+            </div>
+            <div class="image-holder">
+                <img src="./Hermosa.jpg"/>
+                <h3>Gracias por ser tan hermosa ♥</h3>
+            </div>
+            <div class="image-holder">
+                <img src="./Atenta.jpg"/>
+                <h3>Gracias por ser tan atenta ♥</h3>
+            </div>
+            <div class="image-holder">
+                <img src="./Carinosa.jpg"/>
+                <h3>Gracias por ser tan cariñosa ♥</h3>
+            </div>
+            <div class="image-holder">
+                <img src="./Graciosa.jpg"/>
+                <h3>Gracias por ser tan graciosa ♥</h3>
+            </div>
+            <div class="image-holder">
+                <img src="./Companera.jpg">
+                <h3>Gracias por ser tan compañera ♥</h3>
+            </div>
+            <div class="image-holder">
+                <img src="./Mundo.jpg">
+                <h3>Gracias por ser mi mundo ♥</h3>
+            </div>
+            <div class="image-holder">
+                <img src="./Reina.jpg">
+                <h3>Gracias por ser mi reina ♥<h3>
+            </div>
+            <div class="image-holder">
+                <h3 style="margin: 0;">Gracias por ser tan perfecta, tan vos ♥♥♥</h3>
+            </div>
+            <div style="text-align: center; ">
+                <button id="gift-button">Regalo virtual</button>
+            </div>
+        </div>
+        <div id="secret-gift">
+            <img src="./Flor.png"/>
+            <h2 style="color: white;">Ahora si que tengas un muy hermoso cumpleaños, te dejo abrir el resto del regalo en paz.</h2>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
